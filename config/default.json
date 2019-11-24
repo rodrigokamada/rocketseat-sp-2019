@@ -1,0 +1,11 @@
+{
+  "application": {
+    "port": 3000
+  },
+  "mongodb": {
+    "uri": "mongodb+srv://rocketseat:password@clusterrocketseat-b5sew.gcp.mongodb.net/test?retryWrites=true&w=majority"
+  },
+  "logger": {
+    "level": "debug"
+  }
+}

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+<title>Rocketseat SP 2019 - API</title>
+<script>
+var handlerBooks = function() {
+  console.log(this.responseText);
+  if (this.readyState == 4) {
+    document.getElementById('response').innerHTML = JSON.stringify(JSON.parse(this.responseText), null, 2);
+  }
+}
+var getBooks = function() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://123456789.ngrok.io', true);
+  xhr.onreadystatechange = handlerBooks;
+  xhr.send();
+}
+</script>
+</head>
+
+<body>
+
+<input type="button" value="Get books" onClick="getBooks()">
+<br>
+<pre>
+  <code id="response"></code>
+</pre>
+
+</body>
+
+</html>
