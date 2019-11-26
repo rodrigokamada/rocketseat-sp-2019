@@ -3,7 +3,7 @@
     "port": 3000
   },
   "mongodb": {
-    "uri": "mongodb+srv://rocketseat:password@clusterrocketseat-b5sew.gcp.mongodb.net/test?retryWrites=true&w=majority"
+    "uri": "mongodb+srv://rocketseat:YOUR_PASSWORD@cluster0-vx2cb.mongodb.net/rocketseat?retryWrites=true&w=majority"
   },
   "logger": {
     "level": "debug"
