@@ -16,7 +16,7 @@ Funcionalidades:
 - [x] Utilização do log com as dependências [winston](https://www.npmjs.com/package/winston) e [express-winston](https://www.npmjs.com/package/express-winston).
 - [x] Utilização do lint com a dependência [eslint](https://www.npmjs.com/package/eslint).
 - [x] Criação de testes com as dependências [jest](https://www.npmjs.com/package/jest) e [supertest](https://www.npmjs.com/package/supertest).
-- [x] Criação de imagem Docker.
+- [x] Criação de imagem [Docker](#criação-e-execução-de-uma-imagem-docker).
 - [x] Deploy no [Heroku](#criação-e-execução-de-uma-imagem-docker).
 
 
