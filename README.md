@@ -9,7 +9,7 @@ Funcionalidades:
 - [x] Criação do serviço utilizando a dependência [express](https://www.npmjs.com/package/express).
 - [x] Criação das rotas de GET, GET por id, POST, PUT e DELETE fazendo o CRUD no MongoDB.
 - [x] Produtividade no desenvolvimento usando a dependência [nodemon](https://www.npmjs.com/package/nodemon).
-- [x] Conexão com o banco de dados usando a dependência [mongoose](https://www.npmjs.com/package/mongoose) e o serviço gratuito do [MongoDB](criação-e-configuração-do-mongodb).
+- [x] Conexão com o banco de dados usando a dependência [mongoose](https://www.npmjs.com/package/mongoose) e o serviço gratuito do [MongoDB](#criação-e-configuração-do-mongodb).
 - [x] Criação do esquema da coleção do banco de dados.
 - [x] Separação do arquivo de configuração usando a dependência [config](https://www.npmjs.com/package/config).
 - [x] Utilização do CORS com a dependência [cors](https://www.npmjs.com/package/cors).
@@ -17,7 +17,7 @@ Funcionalidades:
 - [x] Utilização do lint com a dependência [eslint](https://www.npmjs.com/package/eslint).
 - [x] Criação de testes com as dependências [jest](https://www.npmjs.com/package/jest) e [supertest](https://www.npmjs.com/package/supertest).
 - [x] Criação de imagem Docker.
-- [x] Deploy no [Heroku](criação-e-execução-de-uma-imagem-docker).
+- [x] Deploy no [Heroku](#criação-e-execução-de-uma-imagem-docker).
 
 
 ## Pré-requisitos
