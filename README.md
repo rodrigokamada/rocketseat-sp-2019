@@ -1,6 +1,23 @@
 # Rocketseat SP 2019
 
-Repositório utilizando no workshop.
+Repositório utilizado no workshop sobre como desenvolver uma API com [Node.js](https://nodejs.org/) e [MongoDB](https://www.mongodb.com/) e o deploy no [Heroku](https://www.heroku.com/) usando uma imagem [Docker](https://www.docker.com/).
+
+
+Funcionalidades:
+
+- [x] Utilização do Typescript com as dependências [typescript](https://www.npmjs.com/package/typescript) e [ts-node](https://www.npmjs.com/package/ts-node).
+- [x] Criação do serviço utilizando a dependência [express](https://www.npmjs.com/package/express).
+- [x] Criação das rotas de GET, GET por id, POST, PUT e DELETE fazendo o CRUD no MongoDB.
+- [x] Produtividade no desenvolvimento usando a dependência [nodemon](https://www.npmjs.com/package/nodemon).
+- [x] Conexão com o banco de dados usando a dependência [mongoose](https://www.npmjs.com/package/mongoose) e o serviço gratuito do [MongoDB](criação-e-configuração-do-mongodb).
+- [x] Criação do esquema da coleção do banco de dados.
+- [x] Separação do arquivo de configuração usando a dependência [config](https://www.npmjs.com/package/config).
+- [x] Utilização do CORS com a dependência [cors](https://www.npmjs.com/package/cors).
+- [x] Utilização do log com as dependências [winston](https://www.npmjs.com/package/winston) e [express-winston](https://www.npmjs.com/package/express-winston).
+- [x] Utilização do lint com a dependência [eslint](https://www.npmjs.com/package/eslint).
+- [x] Criação de testes com as dependências [jest](https://www.npmjs.com/package/jest) e [supertest](https://www.npmjs.com/package/supertest).
+- [x] Criação de imagem Docker.
+- [x] Deploy no [Heroku](criação-e-execução-de-uma-imagem-docker).
 
 
 ## Pré-requisitos
@@ -10,12 +27,12 @@ Repositório utilizando no workshop.
 * [Node.js](https://nodejs.org/)
 * [Git](https://git-scm.com/)
 * [Docker](https://www.docker.com/)
-* [MongoDB](https://www.mongodb.com/) (*optional*)
+* [MongoDB](https://www.mongodb.com/)
 
 ### Serviços
 
-* [Heroku](https://kubesail.com/)
-* [MongoDB](https://www.mongodb.com/) (*optional*)
+* [Heroku](https://www.heroku.com/)
+* [MongoDB](https://www.mongodb.com/)
 
 
 ## Início
@@ -130,6 +147,24 @@ npm start
 **6.1.** Clique em *Connect with the Mongo Shell* para copiar o comando de conexão ou clique em *Connect Your Application* para copiar a URL de conexão. A URL de conexão será configurada no arquivo `config/default.json` da aplicação.
 
 
+## Criação e execução de uma imagem Docker
+
+**1.** Criar a imagem.
+```shell
+docker build -t rocketseat-sp-2019 .
+```
+
+**2.** Executar a imagem exportando a porta da aplicação `3000` para a porta `8080`.
+```shell
+docker run -p 8080:3000 -d rocketseat-sp-2019
+```
+
+**3.** Fazer uma requisição na imagem em execução.
+```shell
+curl -v "http://localhost:8080/v1/books"
+```
+
+
 ## Criação e implantação no Heroku
 
 **1.** Acessar a URL [www.heroku.com](https://www.heroku.com/) e clique no botão *Sign Up for Free* para criar uma nova conta.
@@ -151,22 +186,17 @@ heroku container:login
 heroku create rocketseat-sp-2019
 ```
 
-**6.** Criar a imagem Docker da aplicação. É necessário executar no diretório da aplicação.
-```shell
-docker build -t rocketseat-sp-2019 .
-```
-
-**7.** Criar e enviar a imagem para o Container Registry do Heroku.
+**6.** Criar e enviar a imagem para o Container Registry do Heroku.
 ```shell
 heroku container:push web
 ```
 
-**8.** Publicar a imagem da aplicação.
+**7.** Publicar a imagem da aplicação.
 ```shell
 heroku container:release web
 ```
 
-**9.** Fazer uma requisição na aplicação criada no Heroku.
+**8.** Fazer uma requisição na aplicação criada no Heroku.
 ```shell
 curl -v "https://rocketseat-sp-2019.herokuapp.com/v1/books" | jq
 ```
